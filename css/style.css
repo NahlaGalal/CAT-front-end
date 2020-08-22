@@ -12,8 +12,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
 }
 
-.container {
+.wide-container {
   padding: 0 5%;
+}
+
+.container {
+  padding: 0 10%;
 }
 
 button {
@@ -99,7 +103,7 @@ body, button, input {
   position: absolute;
   list-style: none;
   background-color: #ffffff;
-  box-shadow: 0 4px 6px #00000066;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 16px;
   font-size: 14px;
@@ -238,6 +242,320 @@ body, button, input {
 .Footer > p a {
   color: #CACACA;
   margin-left: 8px;
+}
+
+.Home {
+  background-image: url("../images/background.png");
+  background-position: 60vw 0;
+  background-repeat: repeat-y;
+}
+.Home header {
+  height: calc(100vh - 99px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../images/ring.png");
+  background-position: -500% center;
+  background-repeat: no-repeat;
+}
+.Home header p {
+  color: #707070;
+  width: 50%;
+  margin-top: 24px;
+}
+.Home main {
+  z-index: 5;
+  /** Circles **/
+  /** Technical and non-technical circles **/
+  /* Blogs */
+}
+.Home main .circles {
+  position: relative;
+  min-height: 100vh;
+  background-color: #efefef;
+  overflow: hidden;
+  /* Background */
+  /* Elements */
+}
+.Home main .circles::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 90%;
+  height: 100vh;
+  background-color: rgba(231, 0, 0, 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 50%;
+}
+.Home main .circles::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 30%;
+  background-color: #efefef;
+  border: 5em solid rgba(231, 0, 0, 0.05);
+  box-shadow: 0 0 0 5em #efefef;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+.Home main .circles h2 {
+  position: relative;
+  text-align: center;
+  z-index: 4;
+  margin: 64px 0;
+  font-size: 2em;
+}
+.Home main .circles section {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-template-rows: 300px;
+  grid-gap: 6px;
+  justify-content: center;
+  /* Circle logo */
+}
+@media screen and (max-width: 1020px) {
+  .Home main .circles section {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, 300px);
+  }
+}
+.Home main .circles section > div {
+  display: grid;
+  grid-template-rows: 20px auto 20px;
+  width: 93px;
+  position: relative;
+  z-index: 1;
+  /* Circle name */
+}
+.Home main .circles section > div .image-wrapper {
+  position: relative;
+  grid-row: 2/3;
+  width: 93px;
+  height: 93px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  align-self: center;
+}
+.Home main .circles section > div .image-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 93px;
+  height: 44px;
+  border: 6px solid #E70000;
+  z-index: -1;
+}
+.Home main .circles section > div .image-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 73px;
+  border: 2px dashed #E70000;
+  z-index: -1;
+}
+.Home main .circles section > div .image-wrapper img {
+  width: 66%;
+  height: 66%;
+}
+.Home main .circles section > div p {
+  margin: 0;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.Home main .circles section > div p::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: #E70000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Home main .circles section > div p span {
+  color: #E70000;
+}
+.Home main .circles section > div:nth-child(2n+1) .image-wrapper::before {
+  bottom: -73px;
+}
+.Home main .circles section > div:nth-child(2n+1) .image-wrapper:after {
+  top: -6px;
+  border-top-left-radius: 99px;
+  border-top-right-radius: 99px;
+}
+.Home main .circles section > div:nth-child(2n+1) p {
+  grid-row: 3/4;
+}
+.Home main .circles section > div:nth-child(2n+1) p::after {
+  bottom: 25px;
+}
+.Home main .circles section > div:nth-child(2n) .image-wrapper::before {
+  top: -73px;
+}
+.Home main .circles section > div:nth-child(2n) .image-wrapper::after {
+  bottom: -6px;
+  border-bottom-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+}
+.Home main .circles section > div:nth-child(2n) p {
+  grid-row: 1/2;
+}
+.Home main .circles section > div:nth-child(2n) p::after {
+  top: 25px;
+}
+.Home main [class$=tech-circles] {
+  overflow: hidden;
+}
+.Home main [class$=tech-circles] h2 {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 2em;
+}
+.Home main [class$=tech-circles] section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(4, auto) 1fr;
+  column-gap: 58px;
+  margin-bottom: 40px;
+}
+.Home main [class$=tech-circles] section img {
+  grid-row: 1/6;
+  height: 280px;
+}
+.Home main [class$=tech-circles] section:nth-child(odd) {
+  grid-template-columns: 1fr auto;
+}
+.Home main [class$=tech-circles] section:nth-child(odd) img {
+  grid-column: 2/3;
+}
+.Home main [class$=tech-circles] section h3 {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+.Home main [class$=tech-circles] section h4 {
+  margin: 24px 0 8px;
+}
+.Home main [class$=tech-circles] section .leader-name {
+  font-size: 14px;
+}
+.Home main [class$=tech-circles] section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 36px;
+  color: #E70000;
+  align-self: flex-start;
+  border: 2px solid #E70000;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-top: 24px;
+  transition: all 0.4s ease-in-out;
+}
+.Home main [class$=tech-circles] section a:hover {
+  color: #ffffff;
+  background-color: #E70000;
+}
+.Home main .non-tech-circles {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.Home main .non-tech-circles a:hover {
+  color: #efefef !important;
+}
+.Home main .blogs h2 {
+  margin: 40px 0 65px;
+  text-align: center;
+  font-size: 2em;
+}
+.Home main .blogs__content {
+  display: grid;
+  grid-template-columns: 44px 1fr 1fr 1fr 44px;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 56px;
+}
+.Home main .blogs__content > button {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.03);
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.161);
+}
+.Home main .blogs__content section {
+  height: 324px;
+  background: url("../images/article.png") rgba(0, 0, 0, 0.66);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.161);
+  border-radius: 30px;
+  margin: 0 16px;
+  padding: 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.Home main .blogs__content section:nth-of-type(2) {
+  transform: scale(1.14);
+}
+.Home main .blogs__content section h3 {
+  font-size: 1em;
+}
+.Home main .blogs__content section p {
+  margin-top: 16px;
+}
+.Home main .blogs__content section footer {
+  margin-top: auto;
+  display: flex;
+}
+.Home main .blogs__content section footer span {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+.Home main .blogs__content section footer span img {
+  width: 12px;
+  margin-right: 4px;
+}
+.Home main .blogs__content section footer button {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.Home main .blogs__controls {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+.Home main .blogs__controls span {
+  display: block;
+  width: 28px;
+  height: 8px;
+  border: 1px solid #E70000;
+  border-radius: 13px;
+}
+.Home main .blogs__controls span:not(:last-of-type) {
+  margin-right: 24px;
+}
+.Home main .blogs__controls span.active {
+  background-color: #E70000;
+  box-shadow: 3px 5px 10px #eb010152;
 }
 
 /*# sourceMappingURL=style.css.map */
