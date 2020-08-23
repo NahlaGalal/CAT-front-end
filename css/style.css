@@ -632,6 +632,7 @@ body, button, input {
   position: relative;
   padding: 25px;
   margin: 20px;
+  outline-color: transparent;
 }
 .Events__event__image-wrapper img {
   position: relative;
