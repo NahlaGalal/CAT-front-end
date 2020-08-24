@@ -1,5 +1,4 @@
 @import "abstracts/variables";
-@import "abstracts/mixins";
 
 @import "base/reset";
 @import "base/typography";
@@ -13,5 +12,6 @@
 @import "pages/members";
 @import "pages/circles";
 @import "pages/blogs";
+@import "pages/blog";
 
 @import "components/article";
