@@ -250,18 +250,40 @@ body, button, input {
   background-repeat: repeat-y;
 }
 .Home header {
+  min-height: calc(100vh - 99px);
   height: calc(100vh - 99px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("../images/ring.png");
-  background-position: -45vw center;
+  background: url("../images/ring.png"), url("../images/t-shirt.png");
+  background-position: -45vw center, right center;
+  background-size: 80%, contain;
   background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 1020px) {
+  .Home header {
+    background: url("../images/ring.png");
+    background-position: -45vw center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
 }
 .Home header p {
   color: #707070;
-  width: 50%;
+  width: 40%;
   margin-top: 24px;
+}
+@media screen and (max-width: 1160px) {
+  .Home header p {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .Home header p {
+    width: 80%;
+  }
 }
 .Home main {
   z-index: 5;
@@ -428,6 +450,11 @@ body, button, input {
   column-gap: 58px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 870px) {
+  .Home main [class$=tech-circles] section {
+    grid-template-columns: 1fr;
+  }
+}
 .Home main [class$=tech-circles] section img {
   grid-row: 1/6;
   height: 280px;
@@ -437,6 +464,14 @@ body, button, input {
 }
 .Home main [class$=tech-circles] section:nth-child(odd) img {
   grid-column: 2/3;
+}
+@media screen and (max-width: 870px) {
+  .Home main [class$=tech-circles] section:nth-child(odd) {
+    grid-template-columns: 1fr;
+  }
+  .Home main [class$=tech-circles] section:nth-child(odd) img {
+    grid-column: 1/2;
+  }
 }
 .Home main [class$=tech-circles] section h3 {
   font-size: 1.5em;
@@ -484,6 +519,11 @@ body, button, input {
   font-size: 14px;
   margin-bottom: 56px;
 }
+@media screen and (max-width: 865px) {
+  .Home main .blogs__content {
+    grid-template-columns: 44px 1fr 44px;
+  }
+}
 .Home main .blogs__content > button {
   display: flex;
   width: 44px;
@@ -497,46 +537,17 @@ body, button, input {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.161);
 }
 .Home main .blogs__content section {
-  height: 324px;
-  background: url("../images/article.png") rgba(0, 0, 0, 0.66);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.161);
-  border-radius: 30px;
   margin: 0 16px;
-  padding: 24px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
 }
-.Home main .blogs__content section:nth-of-type(2) {
-  transform: scale(1.14);
+@media screen and (min-width: 866px) {
+  .Home main .blogs__content section:nth-of-type(2) {
+    transform: scale(1.14);
+  }
 }
-.Home main .blogs__content section h3 {
-  font-size: 1em;
-}
-.Home main .blogs__content section p {
-  margin-top: 16px;
-}
-.Home main .blogs__content section footer {
-  margin-top: auto;
-  display: flex;
-}
-.Home main .blogs__content section footer span {
-  margin-right: 16px;
-  display: flex;
-  align-items: center;
-}
-.Home main .blogs__content section footer span img {
-  width: 12px;
-  margin-right: 4px;
-}
-.Home main .blogs__content section footer button {
-  margin-left: auto;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
+@media screen and (max-width: 865px) {
+  .Home main .blogs__content section:not(:nth-of-type(2)) {
+    display: none;
+  }
 }
 .Home main .blogs__controls {
   display: flex;
@@ -1328,6 +1339,7 @@ body, button, input {
   width: 100%;
   height: 100%;
   z-index: -1;
+  mix-blend-mode: overlay;
 }
 .article h3 {
   font-size: 1em;

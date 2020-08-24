@@ -3,19 +3,36 @@
   background-position: 60vw 0;
   background-repeat: repeat-y;
   header {
+    min-height: calc(100vh - 99px);
     height: calc(100vh - 99px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("../images/ring.png");
-    background-position: -45vw center;
+    background: url("../images/ring.png"), url("../images/t-shirt.png");
+    background-position: -45vw center, right center;
+    background-size: 80%, contain;
     background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media screen and (max-width: 1020px) {
+      background: url("../images/ring.png");
+      background-position: -45vw center;
+      background-size: 80%;
+      background-repeat: no-repeat;
+    }
     p {
       color: $text-color;
-      width: 50%;
+      width: 40%;
       margin-top: 24px;
+      @media screen and (max-width: 1160px) {
+        width: 30%;
+      }
+      @media screen and (max-width: 1020px) {
+        width: 80%;
+      }
     }
   }
+
   main {
     z-index: 5;
 
@@ -198,6 +215,10 @@
         grid-template-rows: repeat(4, auto) 1fr;
         column-gap: 58px;
         margin-bottom: 40px;
+        @media screen and (max-width: 870px) {
+          grid-template-columns: 1fr;
+        }
+
         img {
           grid-row: 1/6;
           height: 280px;
@@ -206,6 +227,12 @@
           grid-template-columns: 1fr auto;
           img {
             grid-column: 2/3;
+          }
+          @media screen and (max-width: 870px) {
+            grid-template-columns: 1fr;
+            img {
+              grid-column: 1/2;
+            }
           }
         }
         h3 {
@@ -259,6 +286,9 @@
         align-items: center;
         font-size: 14px;
         margin-bottom: 56px;
+        @media screen and (max-width: 865px) {
+          grid-template-columns: 44px 1fr 44px;
+        }
         > button {
           display: flex;
           width: 44px;
@@ -273,49 +303,15 @@
         }
 
         section {
-          height: 324px;
-          background: url("../images/article.png")
-            rgba($color: $black-color, $alpha: 0.66);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-blend-mode: overlay;
-          box-shadow: 20px 20px 30px $shadow-color;
-          border-radius: 30px;
           margin: 0 16px;
-          padding: 24px;
-          color: $white-color;
-          display: flex;
-          flex-direction: column;
-
-          &:nth-of-type(2) {
-            transform: scale(1.14);
-          }
-
-          h3 {
-            font-size: 1em;
-          }
-
-          p {
-            margin-top: 16px;
-          }
-
-          footer {
-            margin-top: auto;
-            display: flex;
-            span {
-              margin-right: 16px;
-              display: flex;
-              align-items: center;
-              img {
-                width: 12px;
-                margin-right: 4px;
-              }
+          @media screen and (min-width: 866px) {
+            &:nth-of-type(2) {
+              transform: scale(1.14);
             }
-            button {
-              margin-left: auto;
-              font-size: 14px;
-              font-weight: 600;
-              color: $white-color;
+          }
+          @media screen and (max-width: 865px) {
+            &:not(:nth-of-type(2)) {
+              display: none;
             }
           }
         }
