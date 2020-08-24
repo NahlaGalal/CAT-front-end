@@ -8,14 +8,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("../images/ring.png"), url("../images/t-shirt.png");
+    background: url("../images/ring-cat.png"), url("../images/t-shirt.png");
     background-position: -45vw center, right center;
     background-size: 80%, contain;
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 40px;
     @media screen and (max-width: 1020px) {
-      background: url("../images/ring.png");
+      background: url("../images/ring-cat.png");
       background-position: -45vw center;
       background-size: 80%;
       background-repeat: no-repeat;

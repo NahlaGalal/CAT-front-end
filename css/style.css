@@ -255,7 +255,7 @@ body, button, input, textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("../images/ring.png"), url("../images/t-shirt.png");
+  background: url("../images/ring-cat.png"), url("../images/t-shirt.png");
   background-position: -45vw center, right center;
   background-size: 80%, contain;
   background-repeat: no-repeat;
@@ -264,7 +264,7 @@ body, button, input, textarea {
 }
 @media screen and (max-width: 1020px) {
   .Home header {
-    background: url("../images/ring.png");
+    background: url("../images/ring-cat.png");
     background-position: -45vw center;
     background-size: 80%;
     background-repeat: no-repeat;
@@ -1036,8 +1036,9 @@ body, button, input, textarea {
 }
 
 .Circles header {
-  background: url("../images/ring.png") no-repeat;
+  background: url("../images/ring-cat.png") no-repeat;
   background-position: -45vw center;
+  background-size: 80%;
   padding-top: 40px;
   padding-bottom: 40px;
   display: grid;
