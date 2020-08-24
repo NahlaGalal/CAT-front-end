@@ -597,7 +597,7 @@ body, button, input, textarea {
   box-shadow: 0 3px 16px rgba(231, 0, 0, 0.4);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 6;
+  z-index: -1;
 }
 .Events::before {
   top: 50px;
@@ -802,7 +802,7 @@ body, button, input, textarea {
   background-color: #e70000;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(231, 0, 0, 0.4);
-  z-index: 1;
+  z-index: -1;
   margin-top: -23px;
 }
 @media screen and (max-width: 530px) {
@@ -1570,6 +1570,96 @@ body, button, input, textarea {
   .Blog__comments form button {
     grid-column: 3/4;
   }
+}
+
+.Event {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+  overflow: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 900px) {
+  .Event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Event.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.Event__close {
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 36px;
+  height: 36px;
+  background-color: #ffdfdf;
+  color: #e70000;
+  border-radius: 50%;
+  font-size: 2em;
+  outline: none;
+}
+.Event__header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr;
+  column-gap: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  .Event__header {
+    grid-template-columns: 1fr;
+  }
+}
+.Event__header .image-wrapper {
+  border-radius: 20px;
+  grid-row: 1/4;
+}
+.Event__header .image-wrapper img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Event__header h2 {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+.Event__header__desc {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.Event__images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Event__images .image-wrapper {
+  min-width: 150px;
+  width: calc(20% - 24px);
+  border-radius: 20px;
+}
+.Event__images .image-wrapper img {
+  width: 100%;
+  height: 167px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.Event__images .image-wrapper:not(:last-of-type) {
+  margin-right: 24px;
 }
 
 .article {

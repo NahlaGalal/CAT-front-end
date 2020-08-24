@@ -27,7 +27,7 @@
     box-shadow: 0 3px 16px $red-alpha;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 6;
+    z-index: -1;
   }
 
   &::before {
@@ -241,7 +241,7 @@
       background-color: $main-color;
       border-radius: 50%;
       box-shadow: 0 5px 15px $red-alpha;
-      z-index: 1;
+      z-index: -1;
       margin-top: -23px;
       @media screen and (max-width: 530px) {
         display: none;
