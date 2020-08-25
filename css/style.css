@@ -458,6 +458,7 @@ body, button, input, textarea {
 .Home main [class$=tech-circles] section img {
   grid-row: 1/6;
   height: 280px;
+  width: 100%;
 }
 .Home main [class$=tech-circles] section:nth-child(odd) {
   grid-template-columns: 1fr auto;
