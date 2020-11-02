@@ -2,21 +2,21 @@
   background-image: url("../images/background.png");
   background-position: 60vw 0;
   background-repeat: repeat-y;
-  header {
+  &__header {
     min-height: calc(100vh - 99px);
     height: calc(100vh - 99px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: url("../images/ring-cat.png"), url("../images/t-shirt.png");
-    background-position: -45vw center, right center;
+    background-position: -36vw center, right center;
     background-size: 80%, contain;
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 40px;
     @media screen and (max-width: 1020px) {
       background: url("../images/ring-cat.png");
-      background-position: -45vw center;
+      background-position: -36vw center;
       background-size: 80%;
       background-repeat: no-repeat;
     }
@@ -301,6 +301,11 @@
           font-weight: 600;
           font-size: 20px;
           box-shadow: 10px 10px 20px $shadow-color;
+          transition: $transition;
+          &:hover {
+            background-color: $main-color;
+            color: $white-color;
+          }
         }
 
         section {
@@ -328,6 +333,7 @@
           height: 8px;
           border: 1px solid $main-color;
           border-radius: 13px;
+          cursor: pointer;
           &:not(:last-of-type) {
             margin-right: 24px;
           }
