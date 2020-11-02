@@ -1284,9 +1284,30 @@ body, button, input, textarea {
   height: 100%;
   object-fit: cover;
 }
-.Event__header h2 {
+.Event__header__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Event__header__heading h2 {
   font-size: 2em;
   margin-bottom: 8px;
+}
+.Event__header__heading a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: 2px solid #e70000;
+  font-weight: 600;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+}
+.Event__header__heading a:hover {
+  background-color: #e70000;
+  color: #cacaca;
 }
 .Event__header__desc {
   margin-top: 16px;
