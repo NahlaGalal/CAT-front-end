@@ -1047,7 +1047,7 @@ body, button, input, textarea {
 
 .Circles header {
   background: url("../images/ring-cat.png") no-repeat;
-  background-position: -45vw center;
+  background-position: -36vw center;
   background-size: 80%;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1056,7 +1056,7 @@ body, button, input, textarea {
   grid-template-rows: 1fr auto 1fr;
   grid-gap: 24px 56px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 870px) {
   .Circles header {
     grid-template-columns: 1fr;
   }
@@ -1069,7 +1069,7 @@ body, button, input, textarea {
   box-shadow: 0 5px 15px rgba(231, 0, 0, 0.4);
   border-radius: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 870px) {
   .Circles header > .image-wrapper {
     display: none;
   }
@@ -1105,15 +1105,21 @@ body, button, input, textarea {
 }
 .Circles header .leader {
   align-self: start;
-  height: 80px;
+  min-height: 80px;
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 80px 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-gap: 8px 16px;
+}
+@media screen and (max-width: 470px) {
+  .Circles header .leader {
+    grid-template-columns: 80px 1fr;
+  }
 }
 .Circles header .leader .image-wrapper {
   position: relative;
   grid-row: 1/3;
+  height: 80px;
 }
 .Circles header .leader .image-wrapper img {
   width: 80px;
@@ -1145,6 +1151,30 @@ body, button, input, textarea {
 }
 .Circles header .leader p {
   color: #707070;
+}
+.Circles header .leader a {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 16px;
+  width: max-content;
+  align-self: center;
+  height: 36px;
+  color: #e70000;
+  border: 2px solid #e70000;
+  border-radius: 15px;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+}
+.Circles header .leader a:hover {
+  color: #ffffff;
+  background-color: #e70000;
+}
+@media screen and (min-width: 471px) {
+  .Circles header .leader a {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
 }
 .Circles__mentors {
   background-color: rgba(0, 0, 0, 0.03);
@@ -1193,25 +1223,21 @@ body, button, input, textarea {
   text-align: center;
   margin: 40px 0;
 }
-.Circles__members div {
+.Circles__members > div {
   margin: 24px;
 }
-.Circles__members div img {
+.Circles__members > div img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   border: 2px solid #e70000;
   border-radius: 50%;
 }
-.Circles__members div p {
+.Circles__members > div > div {
   position: relative;
-  display: flex;
-  align-items: center;
   padding: 8px;
   box-sizing: border-box;
-  justify-content: center;
   width: 140px;
-  height: 40px;
   background-color: #ffffff;
   font-weight: 600;
   border-radius: 30px;
@@ -1219,6 +1245,19 @@ body, button, input, textarea {
   top: -20px;
   z-index: 3;
   text-align: center;
+}
+.Circles__members > div > div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Circles__members > div > div div a:not(:last-of-type) {
+  margin-right: 4px;
+}
+.Circles__members > div > div div img {
+  width: 16px;
+  height: 16px;
+  border: 0;
 }
 
 .Event {
