@@ -56,13 +56,16 @@ body, button, input, textarea {
   padding-top: 27px;
   padding-bottom: 27px;
 }
+.Navbar > img {
+  height: 45px;
+}
 .Navbar > ul {
   display: grid;
   grid-template-columns: repeat(6, auto);
   column-gap: 16px;
   list-style: none;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 857px) {
   .Navbar > ul {
     position: absolute;
     display: block;
@@ -133,7 +136,7 @@ body, button, input, textarea {
 .Navbar__hamburger-menu {
   padding: 5px;
 }
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 858px) {
   .Navbar__hamburger-menu {
     display: none;
   }
@@ -174,7 +177,7 @@ body, button, input, textarea {
   color: #CACACA;
   font-size: 14px;
 }
-@media screen and (min-width: 875px) {
+@media screen and (min-width: 940px) {
   .Footer {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -182,7 +185,7 @@ body, button, input, textarea {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 874px) {
+@media screen and (min-width: 480px) and (max-width: 939px) {
   .Footer {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -196,7 +199,7 @@ body, button, input, textarea {
 .Footer__discover-team ul {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: 80px 80px;
+  grid-template-columns: 80px 100px;
   column-gap: 16px;
   list-style-position: inside;
 }
